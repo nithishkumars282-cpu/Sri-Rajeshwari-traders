@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sri Rajeshwari Traders | Steel & Roofing Sheets</title>
+
+<meta name="description"
+content="Sri Rajeshwari Traders - Steel products, roofing sheets, barbed fencing and chainlink fencing in Palacode, Dharmapuri.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f6f8;
+    color:#172033;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+}
+
+/* HEADER */
+
+header{
+    background:#071a33;
+    color:white;
+    padding:15px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 15px rgba(0,0,0,.25);
+}
+
+.logo{
+    font-size:23px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#ffc107;
+}
+
+nav{
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffc107;
+}
+
+/* HERO */
+
+.hero{
+    position:relative;
+    height:600px;
+    overflow:hidden;
+}
+
+.slide{
+    position:absolute;
+    inset:0;
+    opacity:0;
+    transition:opacity 1s ease;
+    background-size:cover;
+    background-position:center;
+}
+
+.slide.active{
+    opacity:1;
+}
+
+.slide::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        90deg,
+        rgba(0,0,0,.78),
+        rgba(0,0,0,.35),
+        rgba(0,0,0,.15)
+    );
+}
+
+.hero-content{
+    position:absolute;
+    z-index:2;
+    left:7%;
+    top:50%;
+    transform:translateY(-50%);
+    color:white;
+    max-width:650px;
+}
+
+.hero-content h1{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.hero-content h1 span{
+    color:#ffc107;
+}
+
+.hero-content p{
+    font-size:20px;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 22px;
+    border-radius:7px;
+    font-weight:bold;
+    margin-right:8px;
+    margin-bottom:8px;
+}
+
+.yellow{
+    background:#ffc107;
+    color:#111;
+}
+
+.green{
+    background:#25d366;
+    color:white;
+}
+
+/* SECTIONS */
+
+section{
+    padding:65px 7%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    font-size:34px;
+    color:#071a33;
+}
+
+.section-title p{
+    color:#666;
+}
+
+/* PRODUCTS */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+
+.product{
+    background:white;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.product:hover{
+    transform:translateY(-6px);
+}
+
+.product img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    display:block;
+    background:#e1e6eb;
+}
+
+.product-content{
+    padding:20px;
+}
+
+.product h3{
+    color:#071a33;
+    margin-bottom:8px;
+    font-size:21px;
+}
+
+.product p{
+    color:#666;
+}
+
+/* ABOUT */
+
+.about{
+    background:white;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.about-box{
+    background:#071a33;
+    color:white;
+    padding:35px;
+    border-radius:15px;
+}
+
+.about-box h3{
+    color:#ffc107;
+    margin-bottom:15px;
+}
+
+/* WHY */
+
+.why{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.why-card{
+    background:white;
+    padding:25px;
+    text-align:center;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.icon{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+/* LOCATIONS */
+
+.locations{
+    background:#eef2f6;
+}
+
+.location-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.location-card{
+    background:white;
+    padding:30px;
+    border-radius:14px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.location-card h3{
+    color:#071a33;
+    margin-bottom:12px;
+}
+
+.location-buttons{
+    margin-top:20px;
+}
+
+.location-buttons a{
+    display:inline-block;
+    padding:11px 16px;
+    border-radius:7px;
+    margin-right:7px;
+    margin-bottom:7px;
+    font-weight:bold;
+}
+
+.map-btn{
+    background:#0879d1;
+    color:white;
+}
+
+.call-btn{
+    background:#25d366;
+    color:white;
+}
+
+/* ENQUIRY */
+
+.enquiry{
+    background:white;
+}
+
+.form-box{
+    max-width:700px;
+    margin:auto;
+    background:#f4f6f8;
+    padding:30px;
+    border-radius:15px;
+}
+
+.form-box input,
+.form-box select,
+.form-box textarea{
+    width:100%;
+    padding:13px;
+    margin-bottom:15px;
+    border:1px solid #ccd2d8;
+    border-radius:7px;
+    font-size:16px;
+}
+
+.form-box textarea{
+    height:120px;
+    resize:vertical;
+}
+
+.submit-btn{
+    width:100%;
+    border:none;
+    padding:14px;
+    background:#25d366;
+    color:white;
+    font-size:17px;
+    font-weight:bold;
+    border-radius:7px;
+    cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+    background:#071a33;
+    color:white;
+    text-align:center;
+    padding:30px 7%;
+}
+
+footer strong{
+    color:#ffc107;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:58px;
+    height:58px;
+    background:#25d366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:29px;
+    z-index:999;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    nav{
+        display:none;
+    }
+
+    .hero{
+        height:560px;
+    }
+
+    .hero-content{
+        left:6%;
+        right:6%;
+    }
+
+    .hero-content h1{
+        font-size:38px;
+    }
+
+    .hero-content p{
+        font-size:17px;
+    }
+
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .why{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about-grid,
+    .location-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    section{
+        padding:50px 5%;
+    }
+
+    .hero{
+        height:530px;
+    }
+
+    .hero-content h1{
+        font-size:32px;
+    }
+
+    .hero-content p{
+        font-size:16px;
+    }
+
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    .why{
+        grid-template-columns:1fr;
+    }
+
+    .product img{
+        height:220px;
+    }
+
+    .section-title h2{
+        font-size:28px;
+    }
+
+    header{
+        padding:18px 5%;
+    }
+
+    .logo{
+        font-size:21px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+        SRI <span>RAJESHWARI</span> TRADERS
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#locations">Locations</a>
+        <a href="#enquiry">Enquiry</a>
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+
+    <!-- SLIDE 1 -->
+
+    <div class="slide active"
+         style="background-image:url('https://www.yucelboru.com.tr/files/borular-06.jpg');">
+
+        <div class="hero-content">
+
+            <h1>
+                Quality <span>Steel</span> Products
+            </h1>
+
+            <p>
+                All types of steel products and roofing solutions
+                at Sri Rajeshwari Traders.
+            </p>
+
+            <a href="#products" class="btn yellow">
+                View Products
+            </a>
+
+            <a href="https://wa.me/919750372994"
+               class="btn green"
+               target="_blank">
+                WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- SLIDE 2 -->
+
+    <div class="slide"
+         style="background-image:url('https://static.wixstatic.com/media/fc86d8_15d315f410d34f5a9c48113f36283778~mv2.png');">
+
+        <div class="hero-content">
+
+            <h1>
+                Steel <span>Angles & Channels</span>
+            </h1>
+
+            <p>
+                Strong and reliable steel products for
+                construction and fabrication.
+            </p>
+
+            <a href="#products" class="btn yellow">
+                Explore
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- SLIDE 3 -->
+
+    <div class="slide"
+         style="background-image:url('https://lntsufin.com/storage/mediafiles/catalog/live/16950-530/original/16950-530_image_0.jpg');">
+
+        <div class="hero-content">
+
+            <h1>
+                Premium <span>Roofing Sheets</span>
+            </h1>
+
+            <p>
+                Durable roofing solutions for homes,
+                industries and commercial buildings.
+            </p>
+
+            <a href="#products" class="btn yellow">
+                View Roofing
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- SLIDE 4 BARBED FENCING -->
+
+    <div class="slide"
+         style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/4/4b/Macro_shot_of_a_barbed_wire_fence.jpg');">
+
+        <div class="hero-content">
+
+            <h1>
+                <span>Barbed</span> Fencing
+            </h1>
+
+            <p>
+                Quality barbed fencing solutions
+                for boundary applications.
+            </p>
+
+            <a href="#products" class="btn yellow">
+                View Fencing
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- SLIDE 5 CHAINLINK -->
+
+    <div class="slide"
+         style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/e/e0/Chain-link-Fence.jpg');">
+
+        <div class="hero-content">
+
+            <h1>
+                <span>Chainlink</span> Fencing
+            </h1>
+
+            <p>
+                Quality chainlink fencing solutions
+                for boundary applications.
+            </p>
+
+            <a href="#products" class="btn yellow">
+                View Fencing
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+
+<section id="products">
+
+    <div class="section-title">
+
+        <h2>Our Products</h2>
+
+        <p>
+            Quality steel and fencing products
+        </p>
+
+    </div>
+
+
+    <div class="products">
+
+
+        <!-- STEEL PIPES -->
+
+        <div class="product">
+
+            <img
+            src="https://www.yucelboru.com.tr/files/borular-06.jpg"
+            alt="Steel Pipes"
+            loading="lazy">
+
+            <div class="product-content">
+
+                <h3>Steel Pipes</h3>
+
+                <p>
+                    Different sizes and specifications available.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- STEEL ANGLES -->
+
+        <div class="product">
+
+            <img
+            src="https://static.wixstatic.com/media/fc86d8_15d315f410d34f5a9c48113f36283778~mv2.png"
+            alt="Steel Angles"
+            loading="lazy">
+
+            <div class="product-content">
+
+                <h3>Steel Angles</h3>
+
+                <p>
+                    Strong steel angles for construction
+                    and fabrication.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- STEEL CHANNELS -->
+
+        <div class="product">
+
+            <img
+            src="https://static.wixstatic.com/media/fc86d8_15d315f410d34f5a9c48113f36283778~mv2.png"
+            alt="Steel Channels"
+            loading="lazy">
+
+            <div class="product-content">
+
+                <h3>Steel Channels</h3>
+
+                <p>
+                    Reliable channels for structural applications.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- STEEL SHEETS -->
+
+        <div class="product">
+
+            <img
+            src="https://www.apexmetalsroofing.com/_astro/product_roofing.SEarfwJk.png"
+            alt="Steel Sheets"
+            loading="lazy">
+
+            <div class="product-content">
+
+                <h3>Steel Sheets</h3>
+
+                <p>
+                    Quality steel sheets for various requirements.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- BLUE ROOFING -->
+
+        <div class="product">
+
+            <img
+            src="https://lntsufin.com/storage/mediafiles/catalog/live/16950-530/original/16950-530_image_0.jpg"
+            alt="Blue Roofing Sheets"
+            loading="lazy">
+
+            <div class="product-content">
+
+                <h3>Blue Roofing Sheets</h3>
+
+                <p>
+                    Durable and attractive roofing solutions.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ROOFING -->
+
+        <div class="product">
+
+            <img
+            src="https://www.apexmetalsroofing.com/_astro/product_roofing.SEarfwJk.png"
+            alt="Roofing Sheets"
+            loading="lazy">
+
+            <div class="product-content">
+
+                <h3>Roofing Sheets</h3>
+
+                <p>
+                    Roofing sheets for residential and commercial use.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- BARBED FENCING -->
+
+        <div class="product">
+
+            <img
+            src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Macro_shot_of_a_barbed_wire_fence.jpg"
+            alt="Barbed Fencing"
+            loading="lazy">
+
+            <div class="product-content">
+
+                <h3>Barbed Fencing</h3>
+
+                <p>
+                    Quality barbed fencing for boundary applications.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- CHAINLINK FENCING -->
+
+        <div class="product">
+
+            <img
+            src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Chain-link-Fence.jpg"
+            alt="Chainlink Fencing"
+            loading="lazy">
+
+            <div class="product-content">
+
+                <h3>Chainlink Fencing</h3>
+
+                <p>
+                    Quality chainlink fencing for boundary applications.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <div class="section-title">
+
+        <h2>About Sri Rajeshwari Traders</h2>
+
+        <p>
+            Your trusted steel products supplier
+        </p>
+
+    </div>
+
+
+    <div class="about-grid">
+
+        <div>
+
+            <h2>
+                Quality Steel. Reliable Service.
+            </h2>
+
+            <br>
+
+            <p>
+                Sri Rajeshwari Traders provides a wide
+                range of steel products, roofing sheets
+                and fencing solutions.
+            </p>
+
+            <br>
+
+            <p>
+                We focus on quality products, reasonable
+                pricing and customer-friendly service.
+            </p>
+
+        </div>
+
+
+        <div class="about-box">
+
+            <h3>Our Products</h3>
+
+            <p>
+
+                ✓ Steel Pipes<br>
+                ✓ Steel Angles<br>
+                ✓ Steel Channels<br>
+                ✓ Steel Sheets<br>
+                ✓ Roofing Sheets<br>
+                ✓ Blue Roofing Sheets<br>
+                ✓ Barbed Fencing<br>
+                ✓ Chainlink Fencing
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHY CHOOSE US -->
+
+<section>
+
+    <div class="section-title">
+
+        <h2>Why Choose Us?</h2>
+
+        <p>
+            Reliable products and service
+        </p>
+
+    </div>
+
+
+    <div class="why">
+
+
+        <div class="why-card">
+
+            <div class="icon">🏗️</div>
+
+            <h3>Quality Products</h3>
+
+            <p>
+                Quality steel products for your requirements.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="icon">💰</div>
+
+            <h3>Competitive Price</h3>
+
+            <p>
+                Reasonable pricing for customers.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="icon">🚚</div>
+
+            <h3>Customer Service</h3>
+
+            <p>
+                Customer-friendly service and support.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="icon">📍</div>
+
+            <h3>Convenient Locations</h3>
+
+            <p>
+                Easy access through our branches.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- LOCATIONS -->
+
+<section class="locations" id="locations">
+
+    <div class="section-title">
+
+        <h2>Our Branches</h2>
+
+        <p>
+            Visit us at our locations
+        </p>
+
+    </div>
+
+
+    <div class="location-grid">
+
+
+        <!-- BRANCH 1 -->
+
+        <div class="location-card">
+
+            <h3>📍 Branch 1</h3>
+
+            <p>
+
+                <strong>
+                    Opposite Mahalaxmi TVS Showroom
+                </strong>
+
+                <br>
+
+                Palacode
+
+                <br>
+
+                Dharmapuri, Tamil Nadu
+
+            </p>
+
+
+            <div class="location-buttons">
+
+                <a
+                class="map-btn"
+                target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=Mahalaxmi+TVS+Showroom+Palacode+Dharmapuri">
+
+                    🗺️ Open Maps
+
+                </a>
+
+
+                <a
+                class="call-btn"
+                href="tel:9750372994">
+
+                    📞 Call
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- BRANCH 2 -->
+
+        <div class="location-card">
+
+            <h3>📍 Branch 2</h3>
+
+            <p>
+
+                <strong>
+                    Dharmapuri to Hosur Highway
+                </strong>
+
+                <br>
+
+                Erranhalli Bypass
+
+                <br>
+
+                Near Kavaakarai
+
+                <br>
+
+                Palacode, Dharmapuri
+
+            </p>
+
+
+            <div class="location-buttons">
+
+                <a
+                class="map-btn"
+                target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=Erranhalli+Bypass+Near+Kavaakarai+Palacode+Dharmapuri">
+
+                    🗺️ Open Maps
+
+                </a>
+
+
+                <a
+                class="call-btn"
+                href="tel:9750372994">
+
+                    📞 Call
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ENQUIRY -->
+
+<section class="enquiry" id="enquiry">
+
+    <div class="section-title">
+
+        <h2>Send an Enquiry</h2>
+
+        <p>
+            Get product details and pricing through WhatsApp
+        </p>
+
+    </div>
+
+
+    <div class="form-box">
+
+        <form id="enquiryForm">
+
+            <input
+            type="text"
+            id="name"
+            placeholder="Your Name"
+            required>
+
+
+            <input
+            type="tel"
+            id="phone"
+            placeholder="Phone Number"
+            required>
+
+
+            <select id="product" required>
+
+                <option value="">
+                    Select Product
+                </option>
+
+                <option>Steel Pipes</option>
+
+                <option>Steel Angles</option>
+
+                <option>Steel Channels</option>
+
+                <option>Steel Sheets</option>
+
+                <option>Blue Roofing Sheets</option>
+
+                <option>Roofing Sheets</option>
+
+                <option>Barbed Fencing</option>
+
+                <option>Chainlink Fencing</option>
+
+            </select>
+
+
+            <textarea
+            id="message"
+            placeholder="Enter your requirement..."></textarea>
+
+
+            <button
+            type="submit"
+            class="submit-btn">
+
+                📲 Send Enquiry on WhatsApp
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>
+        Sri <strong>Rajeshwari Traders</strong>
+    </h3>
+
+    <p>
+        All Types of Steel & Roofing Products
+    </p>
+
+    <br>
+
+    <p>
+        📞 9750372994
+    </p>
+
+    <p>
+        Palacode, Dharmapuri, Tamil Nadu
+    </p>
+
+    <br>
+
+    <p>
+        © 2026 Sri Rajeshwari Traders. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP -->
+
+<a
+class="whatsapp"
+href="https://wa.me/919750372994"
+target="_blank"
+aria-label="WhatsApp">
+
+    💬
+
+</a>
+
+
+<script>
+
+/* HERO SLIDER */
+
+const slides = document.querySelectorAll(".slide");
+
+let currentSlide = 0;
+
+function showSlide(index){
+
+    slides.forEach(function(slide){
+        slide.classList.remove("active");
+    });
+
+    slides[index].classList.add("active");
+}
+
+setInterval(function(){
+
+    currentSlide++;
+
+    if(currentSlide >= slides.length){
+        currentSlide = 0;
+    }
+
+    showSlide(currentSlide);
+
+},5000);
+
+
+/* WHATSAPP ENQUIRY */
+
+document
+.getElementById("enquiryForm")
+.addEventListener("submit",function(event){
+
+    event.preventDefault();
+
+    const name =
+        document.getElementById("name").value.trim();
+
+    const phone =
+        document.getElementById("phone").value.trim();
+
+    const product =
+        document.getElementById("product").value;
+
+    const message =
+        document.getElementById("message").value.trim();
+
+
+    const text =
+        "Hello Sri Rajeshwari Traders,\n\n" +
+        "Name: " + name + "\n" +
+        "Phone: " + phone + "\n" +
+        "Product: " + product + "\n" +
+        "Requirement: " + message;
+
+
+    const whatsappURL =
+        "https://wa.me/919750372994?text=" +
+        encodeURIComponent(text);
+
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+});
+
+</script>
+
+</body>
+</html>
